@@ -63,10 +63,10 @@ namespace lowtone\widgets\attributes {
 		$widgetId = $params[0]["widget_id"];
 		$number = $params[1]["number"];
 
+		// Set widget
+
 		if (!isset($wp_registered_widgets[$widgetId]))
 			return $params;
-
-		// Set widget
 
 		$widget = $wp_registered_widgets[$widgetId];
 
@@ -100,8 +100,12 @@ namespace lowtone\widgets\attributes {
 		if (isset($settings["lowtone_widgets_attributes"])) {
 			$attributes = (array) $settings["lowtone_widgets_attributes"];
 
+			// Overwrite ID
+
 			if (isset($attributes["id"]) && ($customId = trim($attributes["id"])))
 				$id = sprintf($customId, $number);
+
+			// Append class
 
 			if (isset($attributes["class"]) && ($customClass = trim($attributes["class"])))
 				$class .= " " . $customClass;
@@ -113,7 +117,7 @@ namespace lowtone\widgets\attributes {
 		$id = apply_filters("lowtone_widgets_attributes_id", $id, $widget);
 		$class = apply_filters("lowtone_widgets_attributes_class", $class, $widget);
 
-		// Redifine before_widget
+		// Redefine before_widget
 
 		$params[0]['before_widget'] = sprintf($sidebar['before_widget'], $id, $class);
 
