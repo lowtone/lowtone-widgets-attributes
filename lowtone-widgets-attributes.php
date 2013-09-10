@@ -32,13 +32,13 @@ namespace lowtone\widgets\attributes {
 			), (array) $instance);
 
 		echo '<fieldset class="lowtone" style="margin: 1em 0">' . 
-			'<legend><span>' . __("Widget attributes", "lowtone_widgets_text_attributes") . '</span></legend>' . 
+			'<legend><span>' . __("Widget attributes", "lowtone_widgets_attributes") . '</span></legend>' . 
 			'<p>' . 
-			sprintf('<label for="%s-id" class="lowtone">', $id) . __("Id", "lowtone_widgets_text_attributes") . '</label>' . 
+			sprintf('<label for="%s-id" class="lowtone">', $id) . __("Id", "lowtone_widgets_attributes") . '</label>' . 
 			sprintf('<input id="%s-id" type="text" name="%s[lowtone_widgets_attributes][id]" value="%s" class="lowtone text">', $id, $nameBase, esc_attr($instance["lowtone_widgets_attributes"]["id"])) . 
 			'</p>' . 
 			'<p>' . 
-			sprintf('<label for="%s-class" class="lowtone">', $id) . __("Class", "lowtone_widgets_text_attributes") . '</label>' . 
+			sprintf('<label for="%s-class" class="lowtone">', $id) . __("Class", "lowtone_widgets_attributes") . '</label>' . 
 			sprintf('<input id="%s-class" type="text" name="%s[lowtone_widgets_attributes][class]" value="%s" class="lowtone text">', $id, $nameBase, esc_attr($instance["lowtone_widgets_attributes"]["class"])) . 
 			'</p>' . 
 			'</fieldset>';
@@ -118,6 +118,12 @@ namespace lowtone\widgets\attributes {
 		$params[0]['before_widget'] = sprintf($sidebar['before_widget'], $id, $class);
 
 		return $params;
+	});
+				
+	// Register textdomain
+
+	add_action("plugins_loaded", function() {
+		load_plugin_textdomain("lowtone_widgets_attributes", false, basename(__DIR__) . "/assets/languages");
 	});
 
 }

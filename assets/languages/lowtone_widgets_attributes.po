@@ -1,0 +1,28 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom Attributes for Widgets\n"
+"POT-Creation-Date: 2013-09-10 15:52+0100\n"
+"PO-Revision-Date: 2013-09-10 15:53+0100\n"
+"Last-Translator: Paul van der Meijs <info@lowtone.nl>\n"
+"Language-Team: Lowtone <info@lowtone.nl>\n"
+"Language: Dutch\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ../..\n"
+
+#: ../../lowtone-widgets-attributes.php:35
+msgid "Widget attributes"
+msgstr "Widget attributen"
+
+#: ../../lowtone-widgets-attributes.php:37
+msgid "Id"
+msgstr "Id"
+
+#: ../../lowtone-widgets-attributes.php:41
+msgid "Class"
+msgstr "Klasse"
