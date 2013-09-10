@@ -119,7 +119,7 @@ namespace lowtone\widgets\attributes {
 
 		// Redefine before_widget
 
-		$params[0]['before_widget'] = sprintf($sidebar['before_widget'], $id, $class);
+		$params[0]["before_widget"] = sprintf($sidebar["before_widget"], $id, $class);
 
 		return $params;
 	});
